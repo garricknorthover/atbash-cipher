@@ -1,6 +1,6 @@
 
 CONSTANT = 'abcdefghijklmnopqrstuvwxyz'
-
+# probably should split this up a little
 def decrypt(word, cipher)
   result = Hash[cipher.split("").zip(CONSTANT.split(""))]
   word.split("").map { |x| result[x] }.join()
@@ -15,7 +15,7 @@ puts decrypt('dzs', cipher)
 # describe "test the  cipher" do
 #   cipher = 'zodvqukgwefbyitmrsplhacxnj'
 #   it "car decrypted" do
-#     expect(decrypt("car", cipher)).to eq 'dzs'
+#     expect(decrypt("dzs", cipher)).to eq 'dzs'
 #   end
 # end
 
