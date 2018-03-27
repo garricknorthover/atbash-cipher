@@ -15,23 +15,24 @@ def array_to_hash(cipher)
   Hash[cipher.split("").zip(CONSTANT.split(""))]
 end
 
-# cipher = 'xipmuzfkbrlwotjancqgveshdy'
-# puts decrypt('skd qj qucbjvq?', cipher)
+cipher = 'oephjizkxdawubnytvfglqsrcm'
+puts decrypt('knlfgnb, sj koqj o yvnewju', cipher) # -> 'houston, we have a problem'
 
 # TESTS!
 
-describe "test the  cipher" do
-  cipher = 'zodvqukgwefbyitmrsplhacxnj'
-  it "car decrypted" do
-    expect(decrypt("dzs", cipher)).to eq 'car'
-  end
-end
+# describe "test the  cipher" do
+#   cipher = 'zodvqukgwefbyitmrsplhacxnj'
+#   it "car decrypted" do
+#     expect(decrypt("dzs", cipher)).to eq 'car'
+#   end
+# end
 
-describe "2nd example" do
-  cipher = 'xipmuzfkbrlwotjancqgveshdy'
-  it "2nd example decrypted" do
-    expect(decrypt("skd qj qucbjvq?", cipher)).to eq 'why so serious?'
-  end
-end
+# describe "2nd example" do
+#   cipher = 'xipmuzfkbrlwotjancqgveshdy'
+#   it "2nd example decrypted" do
+#     expect(decrypt("skd qj qucbjvq?", cipher)).to eq 'why so serious?'
+#   end
+# end
 
-# note to remember Any character other than what you have in the constant doesn't have to be replaced.
+
+
