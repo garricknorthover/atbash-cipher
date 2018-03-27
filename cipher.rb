@@ -2,17 +2,21 @@
 CONSTANT = 'abcdefghijklmnopqrstuvwxyz'
 
 # Splits encrypted word into an array and then mapped over to find the value for the key
+# if character is in the constant
+
 def decrypt(word, cipher)
-  word.split("").map { |x| array_to_hash(cipher)[x] }.join()
+  word.split("").map { |x|
+    CONSTANT.include?(x) ? array_to_hash(cipher)[x] : x
+  }.join()
 end
 
-# Takes the 2 arrays and combines them ta hash with key value pairs
+# Takes the constant and cipher and combines them to a hash with key value pairs
 def array_to_hash(cipher)
   Hash[cipher.split("").zip(CONSTANT.split(""))]
 end
 
-cipher = 'zodvqukgwefbyitmrsplhacxnj'
-puts decrypt('dzs', cipher)
+# cipher = 'xipmuzfkbrlwotjancqgveshdy'
+# puts decrypt('skd qj qucbjvq?', cipher)
 
 # TESTS!
 
