@@ -1,7 +1,7 @@
 
 
 class DecryptCipher
-  CONSTANT = 'abcdefghijklmnopqrstuvwxyz'
+  CONSTANT = 'abcdefghijklmnopqrstuvwxyz'.split("")
 
   # Splits encrypted word into an array and then mapped over to find the value for the key
   # if character is in the constant
@@ -14,11 +14,11 @@ class DecryptCipher
 
   # Takes the constant and cipher and combines them to a hash with key value pairs
   def array_to_hash(cipher)
-    Hash[cipher.split("").zip(CONSTANT.split(""))]
+    Hash[cipher.zip(CONSTANT)]
   end
 end
 
-cipher = 'oephjizkxdawubnytvfglqsrcm'
+cipher = 'oephjizkxdawubnytvfglqsrcm'.split("")
 ab = DecryptCipher.new
 puts ab.decrypt('knlfgnb, sj koqj o yvnewju', cipher) # -> 'houston, we have a problem'
 
